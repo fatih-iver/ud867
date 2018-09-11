@@ -28,7 +28,11 @@ task hello(type: HelloTask)
 class HelloTask extends DefaultTask {
     @TaskAction
     void doAction() {
-        println 'Hello World'
+        logger.info('Starting Task')
+        print("Touch me if you can")
+        logger.lifecycle('A lifecycle info log message.')
+        logger.info('Ending Task')
+        logger.debug('Catch me if you can')
     }
 }
 
