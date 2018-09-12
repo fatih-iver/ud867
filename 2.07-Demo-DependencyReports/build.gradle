@@ -32,7 +32,7 @@ command-line option.
     $ gradle dependencies --configuration runtime
 
 The dependency insight report shows how a particular dependency is included in
-our project. This report is especially helpful when identifying version
+our project. This report is especially helpful when identifying vergrasion
 conflicts. To run the 'dependencyInsight' task we need to specify the
 dependency we're interested in using the '--dependency' command-line option.
 

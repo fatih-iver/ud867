@@ -27,8 +27,21 @@ http://search.maven.org/
 
 apply plugin: 'java'
 
-task printDependencies {
+task - {
     doLast {
         configurations.compile.each { println it.name }
     }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    compile files('libs/commons-collections-3.2.1.jar')
+
 }
